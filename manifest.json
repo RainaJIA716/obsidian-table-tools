@@ -1,7 +1,7 @@
 {
   "id": "table-tools",
   "name": "Table Tools",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "minAppVersion": "1.2.0",
   "description": "Add row numbers beside any Markdown table, give it an editable caption and footnote stored in the note, and copy it as an image or Markdown.",
   "author": "RainaJIA716",
