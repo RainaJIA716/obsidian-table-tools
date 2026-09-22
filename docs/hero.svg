@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <style>
+    .bg     { fill: #ffffff; }
+    .panel  { fill: #f7f7f8; stroke: #e3e3e6; }
+    .title  { fill: #1f1f22; }
+    .sub    { fill: #76767c; }
+    .label  { fill: #9a9aa1; }
+    .mono   { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #4b4b52; }
+    .cmt    { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #8a63d2; }
+    .cell   { fill: #2b2b30; }
+    .head   { fill: #1f1f22; font-weight: 600; }
+    .rule   { stroke: #dededf; }
+    .thead  { fill: #efeff1; }
+    .num    { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #a8a8ae; }
+    .cap    { fill: #1f1f22; font-weight: 600; }
+    .note   { fill: #76767c; }
+    .btn    { fill: #ffffff; stroke: #dededf; }
+    .ico    { stroke: #76767c; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+    .arrow  { stroke: #c3c3c8; fill: none; stroke-width: 2; }
+    .badge  { fill: #8a63d2; }
+    .bnum   { fill: #ffffff; font-weight: 700; }
+    .lead   { fill: #1f1f22; font-weight: 600; }
+    @media (prefers-color-scheme: dark) {
+      .bg    { fill: #1e1e20; }
+      .panel { fill: #26262a; stroke: #35353a; }
+      .title, .head, .cap, .lead { fill: #e6e6e9; }
+      .sub, .note, .num { fill: #8e8e96; }
+      .label { fill: #6e6e76; }
+      .mono  { fill: #b4b4bb; }
+      .cmt   { fill: #a98bec; }
+      .cell  { fill: #d2d2d8; }
+      .rule  { stroke: #3a3a40; }
+      .thead { fill: #2f2f34; }
+      .btn   { fill: #2f2f34; stroke: #43434a; }
+      .ico   { stroke: #a8a8b0; }
+      .arrow { stroke: #4a4a52; }
+      .badge { fill: #a98bec; }
+      .bnum  { fill: #1e1e20; }
+    }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="1200" height="800"/>
+
+  <text class="title" x="60" y="72" font-size="34">Table Tools</text>
+  <text class="sub" x="60" y="106" font-size="17">Row numbers, an editable caption and note, and one-click copy — for any Markdown table.</text>
+
+  <!-- ================= LEFT: what lives in the note ================= -->
+  <text class="label" x="60" y="166" font-size="13" letter-spacing="1.4">WHAT IS IN YOUR NOTE</text>
+  <rect class="panel" x="60" y="184" width="470" height="382" rx="10" stroke-width="1"/>
+
+  <text class="cmt"  x="88" y="228" font-size="15">%% table-title: Q3 headcount %%</text>
+  <text class="mono" x="88" y="268" font-size="15">| Team    | People | Budget |</text>
+  <text class="mono" x="88" y="296" font-size="15">| ------- | ------ | ------ |</text>
+  <text class="mono" x="88" y="324" font-size="15">| Design  | 4      | 62k    |</text>
+  <text class="mono" x="88" y="352" font-size="15">| Eng     | 11     | 180k   |</text>
+  <text class="mono" x="88" y="380" font-size="15">| Ops     | 3      | 41k    |</text>
+  <text class="cmt"  x="88" y="420" font-size="15">%% table-note: excludes contractors %%</text>
+
+  <text class="sub" x="88" y="478" font-size="14.5">Plain Markdown, plus two ordinary Obsidian</text>
+  <text class="sub" x="88" y="502" font-size="14.5">comments. The table itself is never rewritten,</text>
+  <text class="sub" x="88" y="526" font-size="14.5">and the note still reads fine without the plugin.</text>
+
+  <!-- ================= ARROW ================= -->
+  <defs>
+    <marker id="tip" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c3c3c8"/>
+    </marker>
+  </defs>
+  <path class="arrow" d="M 556 375 H 638" marker-end="url(#tip)"/>
+
+  <!-- ================= RIGHT: what you see ================= -->
+  <text class="label" x="664" y="166" font-size="13" letter-spacing="1.4">WHAT YOU SEE</text>
+  <rect class="panel" x="664" y="184" width="476" height="382" rx="10" stroke-width="1"/>
+
+  <!-- hover toolbar, above the table so it covers nothing -->
+  <rect class="btn" x="1046" y="206" width="30" height="30" rx="6" stroke-width="1"/>
+  <g class="ico" transform="translate(1053.5 213.5)">
+    <rect x="0.5" y="0.5" width="14" height="14" rx="2"/>
+    <circle cx="4.8" cy="4.8" r="1.3"/>
+    <polyline points="14.5 10.5 10.5 6.5 2 15"/>
+  </g>
+  <rect class="btn" x="1084" y="206" width="30" height="30" rx="6" stroke-width="1"/>
+  <g class="ico" transform="translate(1091.5 213.5)">
+    <rect x="5" y="5" width="10" height="10" rx="2"/>
+    <path d="M 1.5 10.5 H 0.9 A 1.4 1.4 0 0 1 -0.5 9.1 V 0.9 A 1.4 1.4 0 0 1 0.9 -0.5 H 9.1 A 1.4 1.4 0 0 1 10.5 0.9 V 1.5"/>
+  </g>
+  <circle class="badge" cx="1022" cy="221" r="10"/>
+  <text class="bnum" x="1022" y="226" font-size="13" text-anchor="middle">3</text>
+
+  <!-- caption -->
+  <text class="cap" x="736" y="268" font-size="17">Q3 headcount</text>
+  <circle class="badge" cx="866" cy="262" r="10"/>
+  <text class="bnum" x="866" y="267" font-size="13" text-anchor="middle">2</text>
+
+  <!-- row-number gutter -->
+  <text class="num" x="722" y="352" font-size="13" text-anchor="end">1</text>
+  <text class="num" x="722" y="396" font-size="13" text-anchor="end">2</text>
+  <text class="num" x="722" y="440" font-size="13" text-anchor="end">3</text>
+  <circle class="badge" cx="694" cy="348" r="10"/>
+  <text class="bnum" x="694" y="353" font-size="13" text-anchor="middle">1</text>
+
+  <!-- table -->
+  <rect class="thead" x="736" y="284" width="332" height="38" rx="4"/>
+  <text class="head" x="752" y="309" font-size="14.5">Team</text>
+  <text class="head" x="890" y="309" font-size="14.5">People</text>
+  <text class="head" x="990" y="309" font-size="14.5">Budget</text>
+
+  <line class="rule" x1="736" y1="322" x2="1068" y2="322" stroke-width="1"/>
+  <text class="cell" x="752" y="357" font-size="14.5">Design</text>
+  <text class="cell" x="890" y="357" font-size="14.5">4</text>
+  <text class="cell" x="990" y="357" font-size="14.5">62k</text>
+  <line class="rule" x1="736" y1="370" x2="1068" y2="370" stroke-width="1"/>
+  <text class="cell" x="752" y="401" font-size="14.5">Eng</text>
+  <text class="cell" x="890" y="401" font-size="14.5">11</text>
+  <text class="cell" x="990" y="401" font-size="14.5">180k</text>
+  <line class="rule" x1="736" y1="414" x2="1068" y2="414" stroke-width="1"/>
+  <text class="cell" x="752" y="445" font-size="14.5">Ops</text>
+  <text class="cell" x="890" y="445" font-size="14.5">3</text>
+  <text class="cell" x="990" y="445" font-size="14.5">41k</text>
+  <line class="rule" x1="736" y1="458" x2="1068" y2="458" stroke-width="1"/>
+
+  <!-- note -->
+  <text class="note" x="736" y="488" font-size="13.5">excludes contractors</text>
+
+  <text class="label" x="736" y="534" font-size="13">The toolbar only appears on hover.</text>
+
+  <!-- ================= LEGEND ================= -->
+  <circle class="badge" cx="72" cy="632" r="11"/>
+  <text class="bnum" x="72" y="637" font-size="13.5" text-anchor="middle">1</text>
+  <text class="lead" x="96" y="637" font-size="15.5">Row numbers live outside the table</text>
+  <text class="sub"  x="366" y="637" font-size="15">— they renumber as you edit, and never enter your Markdown.</text>
+
+  <circle class="badge" cx="72" cy="686" r="11"/>
+  <text class="bnum" x="72" y="691" font-size="13.5" text-anchor="middle">2</text>
+  <text class="lead" x="96" y="691" font-size="15.5">Click the caption or note to edit in place</text>
+  <text class="sub"  x="400" y="691" font-size="15">— it is written back into the note as a %% comment.</text>
+
+  <circle class="badge" cx="72" cy="740" r="11"/>
+  <text class="bnum" x="72" y="745" font-size="13.5" text-anchor="middle">3</text>
+  <text class="lead" x="96" y="745" font-size="15.5">Copy as an image, or as clean Markdown</text>
+  <text class="sub"  x="406" y="745" font-size="15">— the caption and note travel with it; the toolbar never does.</text>
+</svg>

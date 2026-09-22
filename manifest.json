@@ -1,10 +1,10 @@
 {
   "id": "table-tools",
   "name": "Table Tools",
-  "version": "1.1.0",
-  "minAppVersion": "1.0.0",
-  "description": "为表格自动添加行号（显示在表格外侧），支持可编辑的表格标题与底部备注（保存在笔记中、阅读与实时预览下均隐藏注释源码），并可一键将表格复制为图片或 Markdown。",
-  "author": "yujia",
-  "authorUrl": "",
+  "version": "1.2.0",
+  "minAppVersion": "1.2.0",
+  "description": "Add row numbers beside any Markdown table, give it an editable caption and footnote stored in the note, and copy it as an image or Markdown.",
+  "author": "RainaJIA716",
+  "authorUrl": "https://github.com/RainaJIA716",
   "isDesktopOnly": false
 }

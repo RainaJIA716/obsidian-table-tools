@@ -1,0 +1,126 @@
+.tt-hidden-comment {
+  display: none !important;
+}
+.tt-wrapper {
+  position: relative;
+  padding-left: 2.2em;
+  margin: 1em 0;
+}
+.tt-wrapper > table {
+  margin: 0 !important;
+}
+
+/* Caption (above the table) and note (below it) share these */
+.tt-meta {
+  outline: none;
+  cursor: text;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.tt-meta.tt-empty::before {
+  content: attr(data-ph);
+  color: var(--text-faint);
+  opacity: 0;
+  transition: opacity 0.12s;
+}
+.tt-wrapper:hover .tt-meta.tt-empty::before {
+  opacity: 1;
+}
+.tt-meta[contenteditable='true'] {
+  background: var(--background-modifier-hover);
+  border-radius: 4px;
+}
+.tt-title {
+  font-weight: 600;
+  font-size: 1.05em;
+  color: var(--text-normal);
+  line-height: 1.4;
+  padding: 2px 4px 8px 2px;
+}
+.tt-title.tt-empty::before {
+  font-weight: 400;
+  font-size: 0.88em;
+}
+.tt-note {
+  font-size: 0.9em;
+  color: var(--text-muted);
+  line-height: 1.5;
+  padding: 8px 4px 2px 2px;
+}
+.tt-note.tt-empty::before {
+  font-size: 0.92em;
+}
+
+/* Row-number gutter */
+.tt-numlayer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.2em;
+  height: 100%;
+  pointer-events: none;
+}
+.tt-rownum {
+  position: absolute;
+  left: 0;
+  transform: translateY(-50%);
+  width: 1.9em;
+  text-align: right;
+  padding-right: 0.5em;
+  font-family: var(--font-monospace);
+  font-weight: 400;
+  font-size: 0.8em;
+  line-height: 1;
+  color: var(--text-faint);
+  font-variant-numeric: tabular-nums;
+  user-select: none;
+}
+
+/* Hover toolbar */
+.tt-toolbar {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.12s ease;
+  z-index: 5;
+}
+.tt-wrapper:hover .tt-toolbar {
+  opacity: 1;
+}
+.tt-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  background: var(--background-secondary);
+  color: var(--text-muted);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+.tt-btn:hover {
+  background: var(--background-modifier-hover);
+  color: var(--text-normal);
+}
+.tt-btn:active {
+  transform: translateY(1px);
+}
+.tt-btn svg {
+  width: 15px !important;
+  height: 15px !important;
+  display: block;
+  fill: none !important;
+  stroke: currentColor !important;
+  color: inherit;
+}
+
+/* Applied while the table is being rasterised, so chrome stays out of the shot */
+.tt-capture-hidden {
+  display: none !important;
+}
